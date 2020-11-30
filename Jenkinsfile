@@ -14,4 +14,12 @@ pipeline {
                 
                 
             }
+         
+          stage("Compile Package") {
+            steps {
+                sh "/usr/bin/mvn package"
+                
+                
+            }
         }
+         }
