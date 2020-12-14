@@ -8,10 +8,10 @@ node
     stage('sonarqube')
     {
        def sonarhome = tool name: 'SQ', type: 'hudson.plugins.sonar.SonarRunnerInstallation';
-        withSonarQubeEnv(credentialsId: 'sonarqub') {
+        withSonarQubeEnv(credentialsId: 'sonarqub')
+        {
          sh "${sonarhome}/bin/sonar-scanner "
-          
-     }
+        }
     }
     
     
