@@ -7,12 +7,10 @@ services:
     network_mode: test
     build: .
     #volumes:
-      #  - "./nginx/conf.d/:/etc/nginx/conf.d/"
-     # - "./nginx/logs:/var/log/nginx"
-    #   - "./nginx/ssl:/etc/nginx/ssl"
+
     restart: always
     ports:
       - 8899:8080
-    #   - 443:443
+   
 
   
