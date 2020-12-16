@@ -1,6 +1,7 @@
 FROM tomcat:8 as build
 Workdir /app
 ADD ./target/onlinebookstore-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/.
+COPY . .
 #CMD "echo","done"
 #CMD java -jar java-tomcat-maven-example.war
 #CMD ["catalina.sh","run"]
