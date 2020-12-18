@@ -55,7 +55,7 @@ pipeline {
                }
                 post {
                 always {
-                    echo "always forever"
+                    cleanWs()
                   }
                 success {
                     // we only worry about archiving the jar file if the build steps are successful
