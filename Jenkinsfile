@@ -35,7 +35,7 @@ pipeline {
                }
             }
          }
-         stage('Ctest){
+         stage('test'){
          steps{
               script{
                    def mvnHome = tool name: 'mvn', type: 'maven'
