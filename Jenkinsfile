@@ -35,6 +35,18 @@ pipeline {
                }
             }
          }
+         stage('Ctest){
+         steps{
+              script{
+                   def mvnHome = tool name: 'mvn', type: 'maven'
+                   
+                       sh "${mvnHome}/bin/mvn test"
+                  //{
+                  //sh "mvn clean install"
+                  
+               }
+            }
+         }
                
          stage('Deploying Application'){
       
