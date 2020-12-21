@@ -4,7 +4,7 @@ services:
   app:
     image: onlinebookstore
     container_name: onlinebookstore
-    network_mode: test
+   # network_mode: test
     build: .
     #volumes:
 
