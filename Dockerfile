@@ -1,4 +1,4 @@
-FROM tomcat:8 as build
+FROM tomcat:8
 
 ADD ./target/onlinebookstore-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/.
 
