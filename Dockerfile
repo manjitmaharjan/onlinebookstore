@@ -1,6 +1,6 @@
-FROM tomcat:8
+#FROM tomcat:8
 
-ADD ./target/onlinebookstore-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/.
+#ADD ./target/onlinebookstore-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/.
 
 #CMD "echo","done"
 #CMD java -jar java-tomcat-maven-example.war
@@ -16,3 +16,9 @@ ADD ./target/onlinebookstore-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/.
 #ENV SPRING_PROFILES_ACTIVE="docker,chaos-monkey"
 #ENTRYPOINT [ "sh", "-c", "java -jar onlinebookstore-0.0.1-SNAPSHOT.war"]
 
+FROM openjdk:8
+#ARG JAR_FILE=./target/*.jar
+#RUN mkdir applicantsDocuments
+#COPY ${JAR_FILE} /app.jar
+COPY target/onlinebookstore-0.0.1-SNAPSHOT.war /app.war
+ENTRYPOINT [ "sh", "-c", "java -jar /app.war"]
