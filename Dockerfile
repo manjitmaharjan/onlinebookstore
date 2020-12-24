@@ -1,9 +1,9 @@
 FROM tomcat:8
 #COPY ./target/*.war app.war
-ENV WAR=./target/*.war
+ARG JAR_FILE=./target/*.war
 
 #ADD ./target/*.war /usr/local/tomcat/webapps/.
-COPY ${WAR} /usr/local/tomcat/webapps/onlinebookstore.war
+COPY ${JAR_FILE} /usr/local/tomcat/webapps/onlinebookstore.war
 
 
 
