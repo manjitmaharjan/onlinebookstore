@@ -1,8 +1,9 @@
 FROM tomcat:8
 #COPY ./target/*.war app.war
+ARG WAR=target/*.war
 
 #ADD ./target/*.war /usr/local/tomcat/webapps/.
-ADD ./target/*.war /usr/local/tomcat/webapps/app.war
+ADD ${WAR} /usr/local/tomcat/webapps/onlinebookstore.war
 
 
 
